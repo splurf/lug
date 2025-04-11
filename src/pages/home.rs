@@ -1,3 +1,4 @@
+use crate::components::*;
 use leptos::prelude::*;
 
 #[component]
@@ -20,21 +21,18 @@ pub fn Home() -> impl IntoView {
             }
         }>
             <div>
+                // top banner
                 <header>
-                    <a
-                        href="https://www.mtu.edu/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="width: auto; height: 100%;"
-                    >
+                    <A href="https://www.mtu.edu/" style="width: auto; height: 100%;">
                         <img
                             src="imgs/mi-tech.png"
                             alt="mi-tech"
                             style="width: auto; height: 95%; object-fit: contain;"
                         />
-                    </a>
+                    </A>
                 </header>
 
+                // smug tux figure w/ caption
                 <figure class="img-top-left img-inter" style="--x: 10%; --y: 25%; --size: 15%;">
                     <img
                         src="imgs/smug-tux.webp"
@@ -48,6 +46,7 @@ pub fn Home() -> impl IntoView {
                     </figcaption>
                 </figure>
 
+                // tux bottom-right corner image
                 <figure class="img-bottom-right img-inter" style="--x: 1%; --y: 1%; --size: 3.5%;">
                     <a href="https://lug.mtu.edu/" target="_blank" rel="noopener noreferrer">
                         <img src="imgs/tux.png" alt="Tux" style="width: 100%; height: auto;" />
@@ -55,8 +54,8 @@ pub fn Home() -> impl IntoView {
                     <figcaption>{"Click Me!"}</figcaption>
                 </figure>
 
+                // main section
                 <h1 class="section-header">{"Linux Users Group"}</h1>
-
                 <section>
                     <h2>{"Why Join the Linux Users Group?"}</h2>
                     <p>
@@ -82,12 +81,13 @@ pub fn Home() -> impl IntoView {
                         </strong>
                     </p>
 
+                    // related links
                     <footer>
-                        <a href="https://discord.gg/5mZUgcNWAK">{"Discord"}</a>
+                        <A href="https://discord.gg/5mZUgcNWAK">{"Discord"}</A>
                         |
-                        <a href="https://lug.mtu.edu/minutes/">{"Meeting Minutes"}</a>
+                        <A href="https://lug.mtu.edu/minutes/">{"Meeting Minutes"}</A>
                         |
-                        <a href="https://lug.mtu.edu/wiki/Main_Page">{"Wiki"}</a>
+                        <A href="https://lug.mtu.edu/wiki/Main_Page">{"Wiki"}</A>
                     </footer>
                 </section>
             </div>
