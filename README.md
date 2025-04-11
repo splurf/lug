@@ -25,3 +25,14 @@ To build a Leptos CSR app for release, use the command:
 trunk build --release
 ```
 Refer to [this](https://github.com/splurf/wlrs-wasm) for more verbose instructions on how to deploy for production.
+
+## Todo
+- Rewrite current HTML implementation into using leptos' built-in HTML structures.
+- Integrate CSS into rust.
+- Add more images/GIFs.
+- Add some cool interactive shit
+    - interactive terminal
+    - mini game(s) (e.g., pong (multiplayer?))
+    - fibonacci / prime number / something computationally expensive
+    - live preview of data of some sort
+    - live chat?
