@@ -1,4 +1,4 @@
-<div style="width: 100%; text-align: center;">
+<div align="center">
     <img src="public/imgs/tux.png" alt="tux" style="width: 150px; height: auto;">
 </div>
 
