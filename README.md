@@ -1,6 +1,6 @@
-<picture style="display: flex; justify-content: center;">
-    <img src="public/imgs/tux.png" alt="LUG Logo" style="width: 10%; height: auto;">
-</picture>
+<div align="center" style="height: 150px">
+    <img src="public/imgs/tux.png" alt="tux">
+</div>
 
 # Linux Users Group
 An `HU3120` project.
