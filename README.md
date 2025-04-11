@@ -1,5 +1,5 @@
 <picture style="display: flex; justify-content: center;">
-    <img src="public/tux.png" alt="LUG Logo" style="width: 150px; height: auto;">
+    <img src="public/imgs/tux.png" alt="LUG Logo" style="width: 10%; height: auto;">
 </picture>
 
 # Linux Users Group
@@ -31,6 +31,7 @@ Refer to [this](https://github.com/splurf/wlrs-wasm) for more verbose instructio
 - Integrate CSS into rust.
 - Add more images/GIFs.
 - Add some cool interactive shit
+- More pages?
     - interactive terminal
     - mini game(s) (e.g., pong (multiplayer?))
     - fibonacci / prime number / something computationally expensive
