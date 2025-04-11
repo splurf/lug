@@ -1,5 +1,5 @@
-<div align="center" style="height: 15vh">
-    <img src="public/imgs/tux.png" alt="tux">
+<div align="center" style="widht: auto; height: 20vh">
+    <img src="public/imgs/tux.png" alt="tux" style="width: auto; height: 150px">
 </div>
 
 # Linux Users Group
