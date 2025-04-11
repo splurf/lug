@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: center; align-items: center;">
+<div style="width: 100%; text-align: center;">
     <img src="public/imgs/tux.png" alt="tux" style="width: 150px; height: auto;">
 </div>
 
