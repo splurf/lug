@@ -106,7 +106,6 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.8;
   width: 100%;
   height: 2rem;
   background: radial-gradient(circle at top left, #3b3e42, #354637);
@@ -114,6 +113,25 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  opacity: 0.8;
+  padding-top: 0.2rem;
+
+  A {
+    position: absolute;
+  }
+
+  .status {
+    font-size: 18px;
+    font-family: 'Fira Code', monospace;
+    color: #33ff81;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .status:hover {
+    color: #66ffcc;
+  }
 }
 
 .img-style {

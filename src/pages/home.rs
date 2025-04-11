@@ -23,12 +23,16 @@ pub fn Home() -> impl IntoView {
             <div>
                 // top banner
                 <header>
-                    <A href="https://www.mtu.edu/" style="width: auto; height: 100%;">
-                        <img
-                            src="imgs/mi-tech.png"
-                            alt="mi-tech"
-                            style="width: auto; height: 95%; object-fit: contain;"
-                        />
+                    <A href="https://github.com/splurf/lug" style="left: 1rem;">
+                        <img src="imgs/github-mark.png" alt="github" style="height: 1.4rem;" />
+                    </A>
+
+                    <A href="https://www.mtu.edu/">
+                        <img src="imgs/mi-tech.png" alt="mi-tech" style="height: 1.8rem;" />
+                    </A>
+
+                    <A href="https://status.lug.mtu.edu/" style="right: 1rem;" class="status">
+                        {"Status"}
                     </A>
                 </header>
 
