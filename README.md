@@ -1,4 +1,4 @@
-<div align="center" style="height: 25vh">
+<div align="center" style="height: 15vh">
     <img src="public/imgs/tux.png" alt="tux">
 </div>
 
