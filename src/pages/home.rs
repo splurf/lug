@@ -21,23 +21,24 @@ pub fn Home() -> impl IntoView {
             }
         }>
             <div>
-                // top banner
                 <header>
                     <A href="https://github.com/splurf/lug" style="left: 1rem;">
-                        <img src="imgs/github-mark.png" alt="github" style="height: 1.4rem;" />
+                        <img src="imgs/github-mark.png" alt="github" style="height: 1.2rem;" />
                     </A>
 
                     <A href="https://www.mtu.edu/">
-                        <img src="imgs/mi-tech.png" alt="mi-tech" style="height: 1.8rem;" />
+                        <img src="imgs/mi-tech.png" alt="mi-tech" style="height: 1.75rem;" />
                     </A>
 
                     <A href="https://status.lug.mtu.edu/" style="right: 1rem;" class="status">
-                        {"Status"}
+                        <img src="imgs/cog.png" alt="mi-tech" style="height: 1rem;" />
                     </A>
                 </header>
 
-                // smug tux figure w/ caption
-                <figure class="img-top-left img-inter" style="--x: 10%; --y: 25%; --size: 15%;">
+                <figure
+                    class="img-top-left img-inter hide-if-tall"
+                    style="--x: 2%; --y: 20%; --size: 14%;"
+                >
                     <img
                         src="imgs/smug-tux.webp"
                         alt="smug-tux"
@@ -45,21 +46,26 @@ pub fn Home() -> impl IntoView {
                         style="width: 100%; height: auto;"
                     />
                     <figcaption>
-                        {"\"We are all geeks at heart and love to talk about technology.\""}
-                        {"  - the people of LUG."}
+                        {"\"We are all geeks at heart and love to talk about technology.\""} <br />
+                        {"- the people of LUG."}
                     </figcaption>
                 </figure>
 
-                // tux bottom-right corner image
-                <figure class="img-bottom-right img-inter" style="--x: 1%; --y: 1%; --size: 3.5%;">
+                <Pong />
+
+                <figure
+                    class="img-bottom-right img-inter hide-if-tall"
+                    style="--x: 2%; --y: 12%; --size: 7%;"
+                >
                     <a href="https://lug.mtu.edu/" target="_blank" rel="noopener noreferrer">
                         <img src="imgs/tux.png" alt="Tux" style="width: 100%; height: auto;" />
                     </a>
-                    <figcaption>{"Click Me!"}</figcaption>
+                    <figcaption style="margin-top: 0px; width: 100%; height: auto;">
+                        {"Click Me!"}
+                    </figcaption>
                 </figure>
 
-                // main section
-                <h1 class="section-header">{"Linux Users Group"}</h1>
+                <h1>{"Linux Users Group"}</h1>
                 <section>
                     <h2>{"Why Join the Linux Users Group?"}</h2>
                     <p>
@@ -85,7 +91,6 @@ pub fn Home() -> impl IntoView {
                         </strong>
                     </p>
 
-                    // related links
                     <footer>
                         <A href="https://discord.gg/5mZUgcNWAK">{"Discord"}</A>
                         |

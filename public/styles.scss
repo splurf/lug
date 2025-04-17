@@ -8,73 +8,80 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("imgs/matrix.png") no-repeat center center/cover;
-  filter: blur(16px);
+  background: url("imgs/matrix.png") no-repeat center center / cover;
+  filter: blur(1.75rem);
   z-index: -1;
 }
 
 body {
   font-family: 'Fira Code', monospace;
   background: radial-gradient(circle at top left, #050c09, #000000);
-  color: #ffffff;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: clamp(0.95rem, 2vmin, 2rem);
+}
+
+canvas {
+  background: transparent;
 }
 
 figure {
-  display: inline-block;
-  margin: 0;
+  display: flexbox;
+  text-align: center;
 
   figcaption {
-    font-size: 1.0rem;
+    font-size: clamp(0.85rem, 1.75vmin, 1.1rem);
     color: #aaa;
-    margin-top: 0.5rem;
+    margin-top: 0.95rem;
     text-align: center;
   }
 }
 
-.section-header {
+h1 {
   background: #16221dad;
-  border-bottom: 2px solid #00ffaa;
+  border-bottom: 0.25rem solid #00ffaa;
   padding: 1rem;
   text-align: center;
   border-radius: 0.75rem 0.75rem 0 0;
-  margin-bottom: 2rem;
-
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vmin, 4rem);
   color: #00ffaa;
-  text-shadow: 0 0 5px #00ffbf;
+  text-shadow: 0 0 0.3125rem #00ffbf;
+  transform-origin: center;
+  animation:
+    translateOscillate 5s ease-in-out infinite,
+    rotateOscillate 3s ease-in-out infinite;
 }
 
 section {
-  margin-top: 2rem;
-  background-color: #111111f3;
-  border: 2px solid #333;
+  margin-top: 0.85rem;
+  background-color: #111111da;
+  border: 0.125rem solid #333333bb;
   border-radius: 1rem;
   padding: 2.5rem;
-  max-width: 800px;
+  max-width: 50rem;
   width: 100%;
-  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
+  box-shadow: 0 0 1.25rem rgba(0, 255, 150, 0.3);
 
   h2 {
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vmin, 2.25rem);
     color: #66ffcc;
     margin-bottom: 1rem;
   }
 
   ul {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     padding-left: 1.5rem;
     list-style: disc;
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.95rem;
       color: #ccc;
       line-height: 1.6;
+      font-size: clamp(1.1rem, 1vmin, 1.25rem);
     }
   }
 
@@ -82,6 +89,7 @@ section {
     margin-bottom: 1rem;
     color: #bbb;
     line-height: 1.6;
+    font-size: clamp(1.2rem, 1vmin, 1.4rem);
 
     strong {
       color: #36cc86;
@@ -92,12 +100,11 @@ section {
   footer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem;
     flex-wrap: wrap;
-
     text-align: center;
     margin-top: 2rem;
-    font-size: 0.9rem;
+    font-size: clamp(0.95rem, 2vmin, 0.95rem);
     color: #666;
   }
 }
@@ -114,14 +121,14 @@ header {
   align-items: center;
   z-index: 999;
   opacity: 0.8;
-  padding-top: 0.2rem;
+  padding-top: 0.205rem;
 
   A {
     position: absolute;
   }
 
   .status {
-    font-size: 18px;
+    font-size: clamp(0.8rem, 2vmin, 1.125rem);
     font-family: 'Fira Code', monospace;
     color: #33ff81;
     text-decoration: none;
@@ -135,12 +142,12 @@ header {
 }
 
 .img-style {
-  border-radius: 0.75rem;
-  box-shadow: 0 0 12px rgba(0, 255, 150, 0.25);
+  border-radius: var(--rad, 0.65rem);
+  box-shadow: 0 0 0.75rem rgba(0, 255, 150, 0.25);
 }
 
 .img-inter {
-  transform: rotate(-1deg);
+  transform: rotate(-1.05deg);
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
 }
@@ -152,43 +159,61 @@ header {
 
 .img {
   position: fixed;
-  width: var(--size, 80%);
-  height: auto;
+  width: var(--size, 20rem);
+  height: var(--size, 20rem);
   z-index: 2;
 }
 
 .img-top-left {
-  position: fixed;
+  @extend .img;
   top: var(--y, 0rem);
   left: var(--x, 0rem);
-  width: var(--size, 80%);
-  height: auto;
-  z-index: 2;
 }
 
 .img-top-right {
-  position: fixed;
+  @extend .img;
   top: var(--y, 0rem);
   right: var(--x, 0rem);
-  width: var(--size, 80%);
-  height: auto;
-  z-index: 2;
 }
 
 .img-bottom-left {
-  position: fixed;
+  @extend .img;
   bottom: var(--y, 0rem);
   left: var(--x, 0rem);
-  width: var(--size, 80%);
-  height: auto;
-  z-index: 2;
 }
 
 .img-bottom-right {
-  position: fixed;
+  @extend .img;
   bottom: var(--y, 0rem);
   right: var(--x, 0rem);
-  width: var(--size, 80%);
-  height: auto;
-  z-index: 2;
+}
+
+@keyframes translateOscillate {
+  0% {
+    transform: translateY(-0.2rem)
+  }
+
+  100% {
+    transform: translateY(-0.2rem)
+  }
+}
+
+@keyframes rotateOscillate {
+  0% {
+    transform: rotate(-0.3deg) translateY(-0.2rem)
+  }
+
+  50% {
+    transform: rotate(0.3deg)
+  }
+
+  100% {
+    transform: rotate(-0.3deg) translateY(-0.2rem)
+  }
+}
+
+@media (orientation: portrait) {
+  .hide-if-tall {
+    display: none;
+  }
 }
